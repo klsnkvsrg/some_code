@@ -22,20 +22,11 @@ if($str_width > 125) {
 
 $pdf->SetCreator(PDF_CREATOR);
 $pdf->SetAuthor(PDF_AUTHOR);
-// $pdf->SetTitle($arResult["NAME"]);
 
-// $pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, '', ''/*,PDF_HEADER_STRING*/);
-// $pdf->setFooterData(array(0,64,0), array(0,64,128));
-// $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP_TEMPLATE, PDF_MARGIN_RIGHT);
 $pdf->SetMargins(PDF_MARGIN_LEFT, 14, PDF_MARGIN_RIGHT);
-// $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
-// $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
-// $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
-// $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 $pdf->SetFont('','',PDF_FONT_SIZE_MAIN);
 $pdf->setPrintHeader(false);
 $pdf->setPrintFooter(false);
-// $pdf->SetFont('','',20);
 
 $pdf->AddPage();
 
@@ -86,18 +77,14 @@ $pdf->Write('', 'The following components must be ordered based on the chosen co
 $pdf->Ln();
 $pdf->Ln();
 $pdf->Ln();
-// $nameWidtd = PDF_PAGE_WIDTH - PDF_MARGIN_LEFT - PDF_MARGIN_RIGHT - 100 - 100;
 $table = '<table cellpadding="3"><thead><tr>';
-// $table .= '<th width="100" style="border-bottom: .1px solid #3c3c3c; background-color: #dcdcdc;"><b>Article number</b></th>';
 $table .= '<th width="100" style="border-bottom: .1px solid #3c3c3c;"><b>Article</b></th>';
 $table .= '<th width="315" style="border-bottom: .1px solid #3c3c3c;"><b>Description</b></th>';
-// $table .= '<th width="100" style="border-bottom: .1px solid #3c3c3c;"><b>Number</b></th></tr>';
 $table .= '<th width="100" style="border-bottom: .1px solid #3c3c3c;"><b>Qt.</b></th></tr>';
 $table .= '</thead><tbody>';
 if (is_array($arResult['ITEMS'])) {
 	foreach ($arResult['ITEMS'] as $key => $arItem) {
 		$table .= '<tr>';
-		// $table .= '<td width="100" style="border-bottom: .1px solid #3c3c3c; background-color: #dcdcdc;">'.$arItem['ARTICLE'].'</td>';
 		$table .= '<td width="100" style="border-bottom: .1px solid #3c3c3c;">'.$arItem['ARTICLE'].'</td>';
 		$table .= '<td width="315" style="border-bottom: .1px solid #3c3c3c;">'.$arItem['TEXT'].'</td>';
 		$table .= '<td width="100" style="border-bottom: .1px solid #3c3c3c;">'.$arItem['QUANTITY'].'</td>';
@@ -108,35 +95,14 @@ $table .= '</tbody></table>';
 
 $pdf->writeHTML($table);
 
-// file_put_contents(__DIR__.'/info-'.date('Ymd').'.log', '');
-// file_put_contents(__DIR__.'/info-'.date('Ymd').'.log', '--- ['.date('d.m.Y H:i:s').'] '.__FILE__.':'.__LINE__.' ---'.PHP_EOL.'+ PDF_PAGE_WIDTH = '.PDF_PAGE_WIDTH.PHP_EOL, FILE_APPEND | LOCK_EX);
-// file_put_contents(__DIR__.'/info-'.date('Ymd').'.log', '--- ['.date('d.m.Y H:i:s').'] '.__FILE__.':'.__LINE__.' ---'.PHP_EOL.'+ PDF_MARGIN_LEFT = '.PDF_MARGIN_LEFT.PHP_EOL, FILE_APPEND | LOCK_EX);
-// file_put_contents(__DIR__.'/info-'.date('Ymd').'.log', '--- ['.date('d.m.Y H:i:s').'] '.__FILE__.':'.__LINE__.' ---'.PHP_EOL.'+ PDF_MARGIN_RIGHT = '.PDF_MARGIN_RIGHT.PHP_EOL, FILE_APPEND | LOCK_EX);
-// file_put_contents(__DIR__.'/info-'.date('Ymd').'.log', '--- ['.date('d.m.Y H:i:s').'] '.__FILE__.':'.__LINE__.' ---'.PHP_EOL.'+ test'.PHP_EOL, FILE_APPEND | LOCK_EX);
-// file_put_contents(__DIR__.'/info-'.date('Ymd').'.log', '--- ['.date('d.m.Y H:i:s').'] '.__FILE__.':'.__LINE__.' ---'.PHP_EOL.'+ $arResult:'.PHP_EOL.print_r($arResult, true).PHP_EOL, FILE_APPEND);
-
 $bSend = false;
 $request = Bitrix\Main\Application::getInstance()->getContext()->getRequest();
 if ($request->getPost('action') == 'send_email') {
 	$outputType = 'F';
 	$bSend = true;
 } else {
-	// $outputType = 'I';
 	$outputType = 'F';
 }
-
-// $pdf->Output(__DIR__.'/vision_results.pdf', 'I');
-// $fileName = sys_get_temp_dir();
-// $fileName .= '/vision_results-'.rand().'.pdf';
-// $fileName = $_SERVER['DOCUMENT_ROOT'];
-
-// preg_match("/^.*\/$/", $fileName, $matches);
-
-// if (!empty($matches)) {
-// 	$fileName = substr($fileName, 0, -1);
-// }
-
-// $fileName .= '/upload/vision/vision_results-'.rand().'.pdf';
 
 $documentRoot = $_SERVER['DOCUMENT_ROOT'];
 preg_match("/^.*\/$/", $documentRoot, $matches);
@@ -151,9 +117,6 @@ $pdf->Output($documentRoot.$folder.$fileName, $outputType);
 
 
 if ($fileName) {
-	// $pdf->Output($fileName, $outputType);
-	// $pdf->Output($arResult['PDF_FILE_NAME'], $outputType);
-
 	if ($bSend) {
 		$arRequest = $request->toArray();
 		$userEmail = $arRequest['email'];
@@ -164,11 +127,9 @@ if ($fileName) {
 
 		\Bitrix\Main\Mail\Event::send([    
 			'EVENT_NAME' => 'VISION_RESULT',
-			// 'MESSAGE_ID' => 64,
 			'LID' => SITE_ID,
 			'C_FIELDS' => $arEventFields,
 			'FILE' => [
-				// $fileName
 				$documentRoot.$folder.$fileName,
 			]
 		]);
