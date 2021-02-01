@@ -1,0 +1,194 @@
+--- [29.10.2020 13:53:22] /home/bitrix/www/bitrix/components/ma/vision/templates/pdf/template.php:106 ---
++ test
+--- [29.10.2020 13:53:22] /home/bitrix/www/bitrix/components/ma/vision/templates/pdf/template.php:107 ---
++ $arResult:
+Array
+(
+    [STEP] => 5
+    [SCREENS] => Array
+        (
+            [0] => type
+            [1] => heating
+            [2] => switch
+            [3] => electrical_floorheating_devices
+            [4] => central_touch_screen
+            [5] => number_manifolds
+            [6] => radiators
+            [7] => heating_cooling
+            [8] => devices_light
+            [9] => result
+        )
+
+    [ITEMS] => Array
+        (
+            [4] => Array
+                (
+                    [ID] => 10029671
+                    [PRODUCT_ID] => 1017
+                    [ARTICLE] => 10029671
+                    [PICTURE] => Array
+                        (
+                            [SRC] => /upload/resize_cache/iblock/f35/200_200_1/Stellantrieb_22CX.jpg
+                            [WIDTH] => 200
+                            [HEIGHT] => 199
+                        )
+
+                    [TEXT] => Electrothermic actuator 22CX
+                    [DETAIL_PAGE_URL] => /catalog/hydronic-radiant-heating-solutions/actuators-and-motors-for-heating-systems/electrothermic-actuator-22cx/
+                    [SELECTED] => 1
+                    [QUANTITY] => 2
+                )
+
+            [0] => Array
+                (
+                    [ID] => P07255
+                    [PRODUCT_ID] => 6612
+                    [ARTICLE] => P07255
+                    [PICTURE] => Array
+                        (
+                            [SRC] => /upload/resize_cache/iblock/39a/200_200_1/Watts_-Vision_-system-_entral-unit-BT_CT02_RF_-capacitive-touch-screen.-Central-unit.-Zentraleinheit.-Zentralsteuerungseinheit.-BT_CT02_RF.-.jpg
+                            [WIDTH] => 200
+                            [HEIGHT] => 200
+                        )
+
+                    [TEXT] => Watts® Vision® system Сentral unit BT-CT02-RF, capacitive touch screen
+                    [DETAIL_PAGE_URL] => /catalog/regulation-and-control/watts-vision-smart-home/watts-vision-system-entral-unit-bt-ct02-rf-with-capacitive-screen/
+                    [QUANTITY] => 1
+                )
+
+            [2] => Array
+                (
+                    [ID] => P06678
+                    [PRODUCT_ID] => 1785
+                    [ARTICLE] => P06678
+                    [PICTURE] => Array
+                        (
+                            [SRC] => /upload/resize_cache/iblock/0fe/200_200_1/radio-frequency-connection-box-bt_m6z02_rf.-central-unit.-zentraleinheit.-zentralsteuerungseinheit.-bt_ct02_rf.-.png
+                            [WIDTH] => 200
+                            [HEIGHT] => 88
+                        )
+
+                    [TEXT] => Radio frequency connection box BT-M6Z02-RF
+                    [DETAIL_PAGE_URL] => /catalog/regulation-and-control/watts-vision-smart-home/radio-frequency-connection-box-bt-m6z02-rf/
+                    [QUANTITY] => 2
+                )
+
+            [5] => Array
+                (
+                    [ID] => P07296
+                    [PRODUCT_ID] => 7448
+                    [ARTICLE] => P07296
+                    [PICTURE] => Array
+                        (
+                            [SRC] => /upload/resize_cache/iblock/fbc/200_200_1/Wall-Receiver-BT_WR02-RF-Free-Contact-.-Central-unit.-Zentraleinheit.-Zentralsteuerungseinheit.-BT_CT02_RF.-.jpg
+                            [WIDTH] => 131
+                            [HEIGHT] => 200
+                        )
+
+                    [TEXT] => Wall Receiver BT-WR02 RF Free Contact 
+                    [DETAIL_PAGE_URL] => /catalog/regulation-and-control/watts-vision-smart-home/wall-receiver-bt-wr02-rf-free-contact-/
+                    [QUANTITY] => 2
+                )
+
+            [1] => Array
+                (
+                    [ID] => P06402
+                    [PRODUCT_ID] => 5435
+                    [ARTICLE] => P06402
+                    [PICTURE] => Array
+                        (
+                            [SRC] => /upload/resize_cache/iblock/ce2/200_200_1/Wall-Receiver-BT_WR02-HC-RF-_potential-free_.-Central-unit.-Zentraleinheit.-Zentralsteuerungseinheit.-BT_CT02_RF.-.jpg
+                            [WIDTH] => 131
+                            [HEIGHT] => 200
+                        )
+
+                    [TEXT] => Wall Receiver BT-WR02 HC RF (potential free)
+                    [DETAIL_PAGE_URL] => /catalog/regulation-and-control/watts-vision-smart-home/wall-receiver-bt-wr02-hc-rf-potential-free/
+                    [QUANTITY] => 1
+                )
+
+            [3] => Array
+                (
+                    [ID] => P06671
+                    [PRODUCT_ID] => 1783
+                    [ARTICLE] => P06671
+                    [PICTURE] => Array
+                        (
+                            [SRC] => /upload/resize_cache/iblock/187/200_200_1/room-rf-thermostat-bt_d02_rf.-central-unit.-zentraleinheit.-zentralsteuerungseinheit.-bt_ct02_rf.-.jpg
+                            [WIDTH] => 200
+                            [HEIGHT] => 199
+                        )
+
+                    [TEXT] => Room RF thermostat BT-D02-RF
+                    [DETAIL_PAGE_URL] => /catalog/regulation-and-control/watts-vision-smart-home/room-rf-thermostat-bt-d02-rf/
+                    [QUANTITY] => 2
+                )
+
+        )
+
+    [TITLE] => Result
+    [ERROR] => 
+    [TOP_TEXT] => 
+    [NOTE] => 
+    [CUR_SCREEN] => result
+    [FORM_DATA] => Array
+        (
+            [PRODUCTS] => Array
+                (
+                    [central_touch_screen] => P07255
+                    [light_devices] => Array
+                        (
+                            [P07296] => 2
+                        )
+
+                )
+
+            [type] => 1
+            [heating] => 1
+            [central_touch_screen] => 1
+            [number_manifolds] => 2
+            [number_termostats] => Array
+                (
+                    [0] => 1
+                    [1] => 1
+                )
+
+            [number_groups] => Array
+                (
+                    [0] => 1
+                    [1] => 1
+                )
+
+            [] => 
+        )
+
+    [PARAMS] => Array
+        (
+            [step] => 5
+            [action] => generate_pdf
+            [field] => 
+            [value] => 
+        )
+
+    [FINAL] => Y
+    [HEADERS] => Array
+        (
+            [0] => Article number
+            [1] => Description
+            [2] => Number
+        )
+
+    [PDF_TEXT] => Download this list in PDF format
+    [EMAIL_TEXT] => Enter your email address to receive the results
+    [EMAIL_BUTTON_TEXT] => Send
+    [REQUEST] => Array
+        (
+            [email] => 
+            [step] => 5
+            [chain] => [{"field":"type","value":"1","step":"1","action":"next"},{"field":"heating","value":"1","step":"2","action":"next"},{"field":"central_touch_screen","value":"1","products":{"central_touch_screen":"P07255"},"step":"3","action":"next"},{"field":"number_manifolds","value":"2","":"","number_termostats":{"0":"1","1":"1"},"number_groups":{"0":"1","1":"1"},"step":"4","action":"next"},{"products":{"light_devices":{"P07296":"2"}},"":"","step":"5","action":"next"}]
+            [action] => generate_pdf
+            [is_ajax] => Y
+        )
+
+)
+
